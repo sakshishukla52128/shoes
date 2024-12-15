@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Registration Form</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Laundry Registration Form</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="service-type">Service Type</label>
+        <select id="service-type" name="service-type" required>
+          <option value="wash">Wash</option>
+          <option value="dry-clean">Dry Clean</option>
+          <option value="fold">Fold</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="pick-up">Pick-Up Date</label>
+        <input type="date" id="pick-up" name="pick-up" required>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
