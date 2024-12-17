@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Buy Now</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container input {
+            width: 50%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px 0 0 8px;
+            font-size: 1rem;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .search-container button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Product Grid */
+        .product-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .product-card p {
+            color: #777;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #00004d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #29297a;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .pagination a {
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #00004d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #29297a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nike Buy Now</h1>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Search Nike products...">
+        <button>Search</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-section">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="shoo1.png" alt="Nike Shoes">
+            <h3>Nike Running Shoes</h3>
+            <p>Performance-driven running shoes for every athlete.</p>
+            <span>$120</span>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="bag.png" alt="Nike Backpack">
+            <h3>Nike Backpack</h3>
+            <p>Stylish and durable for school or gym use.</p>
+            <span>$60</span>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="cap.png" alt="Nike Cap">
+            <h3>Nike Sports Cap</h3>
+            <p>Lightweight and breathable with iconic design.</p>
+            <span>$25</span>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="watch.png" alt="Nike Watch">
+            <h3>Nike Fitness Watch</h3>
+            <p>Track workouts and stay stylish every day.</p>
+            <span>$180</span>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="socks.png" alt="Nike Socks">
+            <h3>Nike Crew Socks</h3>
+            <p>Comfortable socks for sports and daily wear.</p>
+            <span>$15</span>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <img src="jacket.png" alt="Nike Jacket">
+            <h3>Nike Winter Jacket</h3>
+            <p>Stay warm and stylish during the cold season.</p>
+            <span>$200</span>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Next</a>
+    </div>
+</body>
+</html>

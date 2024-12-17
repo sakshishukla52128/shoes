@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Shoes Collection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Nike<span>Collection</span></div>
+    <ul class="nav-links">
+      <li><a href="task4.html">Home</a></li>
+      <li><a href="Man.html">Men</a></li>
+      <li><a href="Woman.html" class="active">Women</a></li>
+      <li><a href="Kids.html">Kids</a></li>
+      <li><a href="contect.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Nike Shoes Search Section -->
+  <section class="search-section">
+    <h1>Nike Shoes Collection</h1>
+    <p>Discover your perfect pair of Nike shoes!</p>
+
+    <!-- Search Input -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for Nike Shoes..." onkeyup="searchShoes()">
+    </div>
+
+    <!-- Shoe Results Section -->
+    <div class="shoe-collection" id="shoeCollection">
+      <!-- Nike Shoe 1 -->
+      <div class="shoe-card" data-name="Nike Air Max">
+        <img src="Nike1.png" alt="Nike Air Max">
+        <p>Nike Air Max - $120</p>
+      </div>
+      <!-- Nike Shoe 2 -->
+      <div class="shoe-card" data-name="Nike Revolution 6">
+        <img src="nike2.png" alt="Nike Revolution 6">
+        <p>Nike Revolution 6 - $100</p>
+      </div>
+      <!-- Nike Shoe 3 -->
+      <div class="shoe-card" data-name="Nike ZoomX">
+        <img src="nike3.png" alt="Nike ZoomX">
+        <p>Nike ZoomX - $150</p>
+      </div>
+      <!-- Nike Shoe 4 -->
+      <div class="shoe-card" data-name="Nike Pegasus Trail">
+        <img src="nike4.png" alt="Nike Pegasus Trail">
+        <p>Nike Pegasus Trail - $130</p>
+      </div>
+      <!-- Nike Shoe 5 -->
+      <div class="shoe-card" data-name="Nike Free Run">
+        <img src="nike5.png" alt="Nike Free Run">
+        <p>Nike Free Run - $110</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    function searchShoes() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const shoes = document.querySelectorAll('.shoe-card');
+
+      shoes.forEach(shoe => {
+        const shoeName = shoe.getAttribute('data-name').toLowerCase();
+        if (shoeName.includes(input)) {
+          shoe.style.display = 'block';
+        } else {
+          shoe.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  <style>/* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial, sans-serif';
+    }
+    
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #00004d;
+      color: white;
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    
+    .logo span {
+      color: #ffcc00;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin: 0 15px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffcc00;
+    }
+    
+    /* Search Section */
+    .search-section {
+      text-align: center;
+      padding: 50px 10%;
+      background: #fff;
+    }
+    
+    .search-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #00004d;
+    }
+    
+    .search-section p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    
+    .search-box input {
+      width: 60%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-box input:focus {
+      border-color: #00004d;
+    }
+    
+    /* Shoe Collection */
+    .shoe-collection {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .shoe-card {
+      width: 200px;
+      padding: 10px;
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .shoe-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .shoe-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .shoe-card p {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .search-box input {
+        width: 90%;
+      }
+      .shoe-collection {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    </style>
+</body>
+</html>

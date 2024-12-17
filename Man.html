@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Shoe Collection</title>
+    <style>
+        /* Resetting some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Men's Shoe Section */
+        .mens-shoe-section {
+            padding: 80px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .mens-shoe-section h2 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .category-tabs button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-tabs button:hover {
+            background-color: #ff6600;
+        }
+
+        /* Product Grid */
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .product:hover img {
+            transform: scale(1.05);
+        }
+
+        .product h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .product .price {
+            font-size: 1.2rem;
+            color: #ff6600;
+            margin-top: 10px;
+        }
+
+        .product .rating {
+            margin-top: 10px;
+            color: #ffcc00;
+        }
+
+        .product .description {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+
+        .product .btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product .btn:hover {
+            background-color: #ff6600;
+        }
+
+        /* Featured Section */
+        .featured {
+            background-color: #f1f1f1;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .featured h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .featured-products .product {
+            width: 240px;
+            margin-bottom: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-tabs {
+                flex-direction: column;
+            }
+
+            .category-tabs button {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mens-shoe-section">
+        <h2>Men's Shoe Collection</h2>
+
+        <div class="category-tabs">
+            <button>All Shoes</button>
+            <button>Running Shoes</button>
+            <button>Casual Shoes</button>
+            <button>Sports Shoes</button>
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <img src="s1.png" alt="Nike Men's Shoe 1">
+                <h3>Nike Air Zoom</h3>
+                <p class="price">$120</p>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="description">Engineered for speed and comfort during runs and workouts.</p>
+                <button class="btn">Shop Now</button>
+            </div>
+            <div class="product">
+                <img src="s2.png" alt="Nike Men's Shoe 2">
+                <h3>Nike React Infinity</h3>
+                <p class="price">$130</p>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="description">Experience unmatched comfort with every step you take.</p>
+                <button class="btn">Shop Now</button>
+            </div>
+            <div class="product">
+                <img src="s3.png" alt="Nike Men's Shoe 3">
+                <h3>Nike Free Run</h3>
+                <p class="price">$110</p>
+                <div class="rating">⭐⭐⭐⭐</div>
+                <p class="description">Lightweight and breathable for casual everyday wear.</p>
+                <button class="btn">Shop Now</button>
+            </div>
+            <div class="product">
+                <img src="s4.png" alt="Nike Men's Shoe 4">
+                <h3>Nike Air Max</h3>
+                <p class="price">$140</p>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="description">Stylish and comfortable with great cushioning for all-day wear.</p>
+                <button class="btn">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="featured">
+            <h2>Featured Men's Shoes</h2>
+            <div class="featured-products">
+                <div class="product">
+                    <img src="s5.png" alt="Featured Nike Shoe">
+                    <h3>Nike Air Force 1</h3>
+                    <p class="price">$120</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="s6.png" alt="Featured Nike Shoe">
+                    <h3>Nike Zoom Fly</h3>
+                    <p class="price">$150</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="s7.png" alt="Featured Nike Shoe">
+                    <h3>Nike React Element</h3>
+                    <p class="price">$135</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
