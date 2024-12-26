@@ -11,6 +11,11 @@
         <div class="logo-container">
             <img src="Nike-Logo-History-1-1.png" class="logo" alt="Nike Logo">
         </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <ul class="nav-links">
             <li><a href="Man.html" class="navigation">Men</a></li>
             <li><a href="Woman.html" class="navigation">Women</a></li>
@@ -33,5 +38,12 @@
             <img src="shoose.png" alt="Nike Shoes" class="product-image">
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

@@ -29,6 +29,19 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-links.active {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
 }
 
 .nav-links a {
@@ -45,6 +58,19 @@ body {
 .cart {
     width: 30px;
     height: auto;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
 }
 
 /* Main Content */
@@ -135,12 +161,19 @@ body {
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 15px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .logo-container img {
         height: 50px;
+    }
+
+    .hamburger-menu {
+        display: flex;
     }
 }
 
@@ -155,10 +188,6 @@ body {
 
     .navbar {
         padding: 1rem;
-    }
-
-    .nav-links {
-        gap: 10px;
     }
 
     .text-section {
