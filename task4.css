@@ -16,6 +16,9 @@ direction: rtl;
 display: flex;
 justify-content: space-between;
 }
+.nav:hover{
+    background-color: rgb(24, 210, 216);
+}
 a{
 color: rgb(168, 20, 144);
 }
@@ -31,8 +34,11 @@ gap: 23px;
    }
 img{
 
-    width: 8vw;
-    height: 11vh;
+    width: 10vw;
+    height: 10vh;
+    right: 10px;
+    top: 20px;
+    
     
 }
 .logo{
@@ -53,8 +59,8 @@ img{
 position: fixed;
 width: 40%;
 height: 90%;
-right: 8%;
-top: 15%;
+right: 4.8%;
+top: 12.6%;
 }
 h1{
 position: absolute;
@@ -117,9 +123,11 @@ border-radius:   7px ;
     position: fixed;
 width: 3.5%;
 height: 44px;
-top: 6.5%;
+top: 5%;
 right: 21%;
+
     }
+   
    
  .font{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -135,5 +143,28 @@ right: 21%;
     right: 55%;
     color: rgb(4, 146, 198);
  }
- 
+ /* Button Group Styling */
+.button-group {
+    display: inline-flex;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #eaf7eb; /* Light green background */
+    padding: 3px; /* Spacing around the buttons */
+  }
+  
+  /* Buttons Styling */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .navigation{
+    color: black;
+  }
 
+ .navigation:hover{
+color: hsl(7, 84%, 48%);
+ }
