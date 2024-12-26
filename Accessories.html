@@ -3,208 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Now - Nike Accessories</title>
+    <title>Nike Buy Now</title>
     <style>
-        /* Resetting some default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body and container styling */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            height: 100vh;
             padding: 20px;
         }
 
-        /* Header */
-        .header {
+        h1 {
             text-align: center;
+            font-size: 2.5rem;
+            color: #000;
             margin-bottom: 20px;
         }
 
-        .header h1 {
-            font-size: 2rem;
-            color: #333;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-           top: 10px;
-           position: fixed;
-        }
-
-        /* Search bar container */
+        /* Search Bar */
         .search-container {
-            max-width: 600px;
-            width: 100%;
-            margin: 20px auto;
-            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
-        /* Search bar style */
-        .search-bar {
-            width: 100%;
-            padding: 12px 20px;
-            font-size: 1rem;
-            border-radius: 30px;
+        .search-container input {
+            width: 50%;
+            padding: 10px;
             border: 2px solid #ccc;
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Search button style */
-        .search-btn {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #ff6600;
-            color: white;
-            padding: 10px 15px;
+            border-radius: 8px 0 0 8px;
             font-size: 1rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
         }
 
-        .search-btn:hover {
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .search-container button:hover {
             background-color: #e64a19;
         }
 
-        /* Product container */
-        .products {
+        /* Product Grid */
+        .product-section {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            max-width: 1200px;
-            width: 100%;
-            margin: 20px auto;
         }
 
-        /* Product box */
-        .product-box {
-            background-color: #ffffff;
-            padding: 20px;
+        .product-card {
+            background-color: #fff;
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
-        .product-box:hover {
+        .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
-        .product-box img {
-            max-width: 100%;
+        .product-card img {
+            width: 100%;
             height: auto;
-            border-radius: 8px;
+            aspect-ratio: 16/9;
+            object-fit: cover;
         }
 
-        .product-box h3 {
+        .product-card h3 {
+            margin: 10px 0;
             font-size: 1.2rem;
-            margin: 15px 0;
-            color: #333;
         }
 
-        .product-box p {
-            font-size: 1rem;
+        .product-card p {
             color: #777;
-            margin-bottom: 15px;
-        }
-
-        .product-box button {
-            background-color: #ff6600;
-            color: white;
-            padding: 10px 20px;
             font-size: 1rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
+            margin-bottom: 10px;
         }
 
-        .product-box button:hover {
-            background-color: #e64a19;
+        .product-card span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #00004d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #29297a;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .pagination a {
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #00004d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #29297a;
         }
     </style>
 </head>
 <body>
+    <h1>Nike Buy Now</h1>
 
-    <!-- Header Section -->
-    <div class="header">
-        <h1>Shop Nike Accessories</h1>
-       
-    </div>
-
-    <!-- Search Bar Section -->
+    <!-- Search Bar -->
     <div class="search-container">
-        <input type="text" class="search-bar" id="searchBar" placeholder="Search for products..." onkeyup="searchProducts()">
-        <button class="search-btn">Search</button>
+        <input type="text" placeholder="Search Nike products...">
+        <button>Search</button>
     </div>
 
-    <!-- Products Section -->
-    <div class="products" id="productList">
-        <div class="product-box">
-            <img src="shoo1.png" alt="Nike Shoe">
-            <h3>Nike Air Max</h3>
-            <p>Comfortable, stylish running shoes</p>
-            <button onclick="location.href='checkout.html'">Buy Now</button>
+    <!-- Product Grid -->
+    <div class="product-section">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="shoo1.png" alt="Nike Shoes">
+            <h3>Nike Running Shoes</h3>
+            <p>Performance-driven running shoes for every athlete.</p>
+            <span>$120</span>
+            <a href="#" class="buy-btn">Buy Now</a>
         </div>
-        <div class="product-box">
+
+        <!-- Product 2 -->
+        <div class="product-card">
             <img src="bag.png" alt="Nike Backpack">
             <h3>Nike Backpack</h3>
-            <p>Durable backpack for daily use</p>
-            <button onclick="location.href='checkout.html'">Buy Now</button>
+            <p>Stylish and durable for school or gym use.</p>
+            <span>$60</span>
+            <a href="#" class="buy-btn">Buy Now</a>
         </div>
-        <div class="product-box">
+
+        <!-- Product 3 -->
+        <div class="product-card">
             <img src="cap.png" alt="Nike Cap">
-            <h3>Nike Cap</h3>
-            <p>Stylish cap for sunny days</p>
-            <button onclick="location.href='checkout.html'">Buy Now</button>
+            <h3>Nike Sports Cap</h3>
+            <p>Lightweight and breathable with iconic design.</p>
+            <span>$25</span>
+            <a href="#" class="buy-btn">Buy Now</a>
         </div>
-        <div class="product-box">
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="watch.png" alt="Nike Watch">
+            <h3>Nike Fitness Watch</h3>
+            <p>Track workouts and stay stylish every day.</p>
+            <span>$180</span>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
             <img src="socks.png" alt="Nike Socks">
-            <h3>Nike Socks</h3>
-            <p>Comfortable cotton socks</p>
-            <button onclick="location.href='checkout.html'">Buy Now</button>
+            <h3>Nike Crew Socks</h3>
+            <p>Comfortable socks for sports and daily wear.</p>
+            <span>$15</span>
+            <a href="#" class="buy-btn">Buy Now</a>
         </div>
-        <div class="product-box">
-            <img src="wear.png" alt="Nike Sportswear">
-            <h3>Nike Sportswear</h3>
-            <p>Perfect for working out</p>
-            <button onclick="location.href='checkout.html'">Buy Now</button>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <img src="jacket.png" alt="Nike Jacket">
+            <h3>Nike Winter Jacket</h3>
+            <p>Stay warm and stylish during the cold season.</p>
+            <span>$200</span>
+            <a href="#" class="buy-btn">Buy Now</a>
         </div>
-        <!-- Add more products as needed -->
     </div>
 
-    <!-- Script for search functionality (just a basic example) -->
-    <script>
-        function searchProducts() {
-            let input = document.getElementById('searchBar').value.toLowerCase();
-            let productList = document.getElementById('productList');
-            let products = productList.getElementsByClassName('product-box');
-            
-            for (let i = 0; i < products.length; i++) {
-                let title = products[i].getElementsByTagName('h3')[0];
-                let description = products[i].getElementsByTagName('p')[0];
-                if (title.innerHTML.toLowerCase().indexOf(input) > -1 || description.innerHTML.toLowerCase().indexOf(input) > -1) {
-                    products[i].style.display = "";
-                } else {
-                    products[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Next</a>
+    </div>
 </body>
 </html>
