@@ -108,7 +108,7 @@
 <body>
     <div class="signup-container">
         <h1>Join Our Shoe Community</h1>
-        <form action="/submit.html" method="get" id="signupForm" onsubmit="return validatePassword()">
+        <form id="signupForm" action="submit.html" method="GET" onsubmit="return validatePasswordAndRedirect()">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
@@ -128,14 +128,13 @@
             </div>
 
             <button type="submit" class="submit-button">Submit</button>
-            <br>
-            <br>
-            <a href="login.html">Already have an account? Login<p class="login-link"></p></a>
+            <br><br>
+            <a href="login.html">Already have an account? Login</a>
         </form>
     </div>
 
     <script>
-        function validatePassword() {
+        function validatePasswordAndRedirect() {
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
             const errorMessage = document.getElementById('passwordError');
