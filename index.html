@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoe Store Sign-Up</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             background-image: url(sho.png);
-           
             margin: 110;
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
@@ -109,7 +107,7 @@
 <body>
     <div class="signup-container">
         <h1>Join Our Shoe Community</h1>
-        <form action="/post"  id="signupForm" onsubmit="return validatePasswordAndRedirect()">
+        <form id="signupForm" action="submit.html" method="GET" onsubmit="return validatePasswordAndRedirect()">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
@@ -128,10 +126,9 @@
                 <p class="error-message" id="passwordError">Passwords do not match or are empty.</p>
             </div>
 
-          <a href="submit.html"> <p type="submit" class="submit-button">Submit</p></a> 
-            <br>
-            <br>
-            <a href="login.html">Already have an account? Login<p class="login-link"></p></a>
+            <button type="submit" class="submit-button">Submit</button>
+            <br><br>
+            <a href="login.html">Already have an account? Login</a>
         </form>
     </div>
 
@@ -148,8 +145,7 @@
             }
 
             errorMessage.style.display = 'none'; // Hide error message
-
-          
+            return true; // Allow form submission
         }
     </script>
 </body>
