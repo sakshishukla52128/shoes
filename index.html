@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-image: url(sho.png);
+            background-image: url('sho.png');
            
-            margin: 110;
+           
+            margin: 0;  
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .signup-container {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
             max-width: 400px;
             width: 100%;
             text-align: center;
         }
 
         .signup-container h1 {
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 20px;
             color: #333;
+            font-weight: bold;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: left;
         }
 
@@ -49,19 +51,26 @@
 
         input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-top: 5px;
             font-size: 14px;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-sizing: border-box;
+            background: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #ff7e5f;
+            outline: none;
         }
 
         .submit-button {
             background: linear-gradient(to right, #ff7e5f, #feb47b);
             color: #fff;
             font-size: 16px;
-            padding: 10px 0px;
+            padding: 12px 0;
             border: none;
             border-radius: 25px;
             cursor: pointer;
@@ -109,7 +118,7 @@
 <body>
     <div class="signup-container">
         <h1>Join Our Shoe Community</h1>
-        <form action="/post"  id="signupForm" onsubmit="return validatePasswordAndRedirect()">
+        <form id="signupForm" onsubmit="return validatePasswordAndRedirect()">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
@@ -128,11 +137,11 @@
                 <p class="error-message" id="passwordError">Passwords do not match or are empty.</p>
             </div>
 
-          <a href="submit.html"> <p type="submit" class="submit-button">Submit</p></a> 
-            <br>
-            <br>
-            <a href="login.html">Already have an account? Login<p class="login-link"></p></a>
+            <button type="submit" class="submit-button">Submit</button>
         </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
     </div>
 
     <script>
@@ -148,8 +157,8 @@
             }
 
             errorMessage.style.display = 'none'; // Hide error message
-
-          
+            window.location.href = 'submit.html'; // Redirect to submit.html
+            return false; // Prevent default form submission behavior
         }
     </script>
 </body>
